@@ -1,0 +1,27 @@
+/**
+ * Created by Pompo on 27.06.2017.
+ */
+html, body{
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  color: $black;
+  font-weight: 300;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 500;
+}
+
+.c-wrap{
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}

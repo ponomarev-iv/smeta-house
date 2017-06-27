@@ -1,0 +1,73 @@
+/**
+ * Created by Pompo on 27.06.2017.
+ */
+//form
+.form{
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 12px;
+  color: $white;
+  padding: 20px;
+
+  &__row{
+    margin-bottom: 1.5rem;
+
+    &:last-of-type{
+      margin: 0 auto;
+    }
+  }
+
+  &__btn{
+    background-color: rgba(255,255,255,.8);
+    transition: all linear .3s;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 220px;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.25em;
+    display: block;
+
+    &:hover{
+      background-color: #ffffff;
+    }
+
+    &:active{
+      top: 1px;
+    }
+  }
+}
+
+.label{
+  font-weight: 300;
+  display: block;
+  margin-bottom: .5em;
+  padding-left: .5em;
+}
+
+.input{
+  width: 100%;
+  background-color: rgba(255,255,255,.8);
+  transition: background-color ease .3s;
+  height: 2.5rem;
+  border: none;
+  padding: .5em;
+  font-size: 1rem;
+  border-radius: 6px;
+
+  &:focus{
+    background-color: $white;
+  }
+}
+
+.textarea{
+  @extend .input;
+  height: auto;
+  resize: none;
+}

@@ -1,0 +1,57 @@
+/**
+ * Created by Pompo on 27.06.2017.
+ */
+.hero-section{
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+
+  &__bg{
+    background: url('../img/bg_hero.png') no-repeat scroll 50% 50% / cover;
+    height: 100%;
+    width: 100%;
+    animation: hero 35s linear infinite;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 3rem;
+    color: $white;
+    text-align: center;
+    padding: 2em 0 1em;
+
+  }
+
+  &__txt{
+    text-align: center;
+    color: $white;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    padding-bottom: 2em;
+  }
+
+  &__form{
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  & .c-wrap{
+    position: relative;
+    height: 100%;
+  }
+
+}
+
+@keyframes hero {
+  0%{
+    transform: scale(1);
+  }
+
+  100%{
+    transform: scale(1.5);
+  }
+
+}

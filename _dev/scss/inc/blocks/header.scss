@@ -1,0 +1,51 @@
+/**
+ * Created by Pompo on 27.06.2017.
+ */
+.logo{
+  background: url('../img/logo.png') no-repeat scroll transparent 50% 50% / contain;
+  width: 100px;
+  height: 100px;
+}
+
+.header{
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone{
+  color: $white;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  & span{
+    font-size: 1rem;
+  }
+}
+
+.scroll-down{
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $white;
+  cursor: pointer;
+  display: block;
+  transition: all ease .3s;
+  text-align: center;
+
+  & img{
+    padding-top: calc(50% - 9px);
+    max-width: 18px;
+  }
+  //background: url('../img/scroll-down.svg') no-repeat 50% 50% / contain;
+
+
+  &:hover,
+  &:active{
+    bottom: 35px;
+  }
+}

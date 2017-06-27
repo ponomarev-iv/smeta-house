@@ -1,0 +1,12 @@
+/**
+ * Created by Pompo on 27.06.2017.
+ */
+.main-nav{
+
+  & a{
+    color: $white;
+    padding: 0 1rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
