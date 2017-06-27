@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<section class="hero-section">
-    <div class="hero-section__bg"></div>
+<section id="hero" class="hero">
+    <div class="hero__bg"></div>
     <div class="c-wrap">
         <header class="header">
             <div class="header__left">
@@ -19,12 +19,13 @@
             </div>
 
             <div class="header__centr">
-                <nav class="main-nav">
-                    <a href="#">Услуги</a>
-                    <a href="#">Стоимость</a>
-                    <a href="#">Сроки выполнения работ</a>
-                    <a href="#">Отзывы клиентов</a>
-                    <a href="#">Контакты</a>
+                <nav id="js-nav" class="main-nav">
+                    <a href="#hero" class="is-active">Главная</a>
+                    <a href="#service">Услуги</a>
+                    <a href="#price">Цены</a>
+                    <a href="#job-time">Сроки</a>
+                    <a href="#feedback">Отзывы</a>
+                    <a href="#contact">Контакты</a>
                 </nav>
             </div>
 
@@ -33,13 +34,13 @@
             </div>
         </header>
 
-        <h1 class="hero-section__title">Cоставление и&nbsp;проверка сметной документации</h1>
+        <h1 class="hero__title">Cоставление и&nbsp;проверка сметной документации</h1>
 
-            <p class="hero-section__txt">
+            <p class="hero__txt">
                 Мы готовы сделать бесплатный предварительный расчет вашего проекта прямо сегодня
             </p>
 
-            <div class="hero-section__form">
+            <div class="hero__form">
                 <form action="" class="form">
                     <div class="form__row">
                         <label for="name" class="label">Ваше имя:</label>
@@ -67,6 +68,8 @@
     </a>
 
 </section>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
