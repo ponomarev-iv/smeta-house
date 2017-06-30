@@ -8,8 +8,15 @@
 @import "inc/ui";
 @import "inc/typo";
 
+//assets
+@import "inc/assets/swiper";
+
 //blocks
 @import "inc/blocks/hero";
 @import "inc/blocks/header";
 @import "inc/blocks/main-nav";
 @import "inc/blocks/service";
+@import "inc/blocks/price";
+@import "inc/blocks/time-block";
+@import "inc/blocks/feedback";
+@import "inc/blocks/contact-block";

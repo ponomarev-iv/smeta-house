@@ -1,0 +1,58 @@
+/**
+ * Created by Pompo on 30.06.2017.
+ */
+.price-table{
+  width: 100%;
+  //table-layout: fixed;
+  border: none;
+  margin-bottom: 3rem;
+
+  & th, td{
+    vertical-align: top;
+    padding: 1rem .75rem;
+    line-height: 1.5;
+  }
+
+  & th{
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+    font-size: 1.2em;
+    text-align: left;
+    padding: .75rem .5rem;
+  }
+
+  & .sub{
+    padding: .3em .75rem;
+  }
+
+  & .sub_top{
+    padding: .3em .75rem 1rem;
+  }
+
+  & .sub_bot{
+    padding: 1rem .75rem .3rem;
+  }
+
+  & tr{
+    &:last-child{
+      border-bottom: 2px solid #000;
+    }
+  }
+  
+  & .bg{
+    background-color: #f2f2f2;
+  }
+}
+
+.price-list{
+  padding-left: 30px;
+  color: $accent;
+  text-decoration: none;
+  transition: opacity ease .3s;
+  background: url('../img/ico-download.svg') no-repeat scroll transparent 0 50%;
+
+  &:hover{
+    text-decoration: underline;
+    opacity: .8;
+  }
+}

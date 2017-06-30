@@ -1,0 +1,17 @@
+/**
+ * Created by Pompo on 30.06.2017.
+ */
+#job-time{
+  background-color: #f2f2f2;
+}
+
+.time-block{
+  text-align: center;
+  font-size: 1.35em;
+  line-height: 1.5;
+  padding-bottom: 1em;
+
+  & b{
+    font-weight: 500;
+  }
+}

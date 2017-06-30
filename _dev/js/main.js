@@ -33,7 +33,19 @@ function animateHeader(){
 
 animateHeader();
 
+function initSwiper(){
+    var mySwiper = new Swiper ('#js-feedback', {
+        // Optional parameters
+        loop: true,
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    })
+}
+
 
 $(document).ready(function(){
     toggleMenu();
+    initSwiper();
 });
