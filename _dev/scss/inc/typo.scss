@@ -8,6 +8,10 @@
   padding-bottom: 1.5em;
   position: relative;
 
+  @include respondTo(desktop){
+    font-size: 1.5rem;
+  }
+
   &:after{
     position: absolute;
     bottom: 1em;

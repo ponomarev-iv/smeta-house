@@ -3,6 +3,10 @@
  */
 .main-nav{
 
+  @include respondTo(tablet){
+    display: none;
+  }
+
   & a{
     //color: $white;
     padding: 1rem;
@@ -15,10 +19,10 @@
     margin: 0 1em;
     text-align: center;
     opacity: 0;
-    //
-    //&:hover{
-    //  //opacity: 1;
-    //}
+
+    @include respondTo(desktop){
+      font-size: .85em;
+    }
 
     &:before,
     &:after{

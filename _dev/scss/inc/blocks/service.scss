@@ -20,6 +20,14 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
+
+    @include respondTo(desktop){
+      width: 32%;
+    }
+
+    @include respondTo(tablet){
+      font-size: 1em;
+    }
   }
 
   &__icon{

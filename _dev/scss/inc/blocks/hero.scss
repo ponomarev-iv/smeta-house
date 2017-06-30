@@ -6,7 +6,11 @@
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 9em 0 3em;
+  padding: 9em 0 6em;
+
+  @include respondTo(tablet){
+    padding-top: 0;
+  }
 
   &__bg{
     background: url('../img/bg_hero.png') no-repeat scroll 50% 50% / cover;
@@ -24,7 +28,10 @@
     color: $white;
     text-align: center;
     padding: 1em 0;
-    //opacity: 0;
+
+    @include respondTo(desktop){
+      font-size: 2rem;
+    }
 
   }
 
@@ -34,6 +41,10 @@
     font-size: 1.35rem;
     line-height: 1.5;
     padding-bottom: 2em;
+
+    @include respondTo(desktop){
+      font-size: 1.25rem;
+    }
   }
 
   &__form{

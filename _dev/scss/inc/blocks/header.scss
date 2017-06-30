@@ -6,6 +6,11 @@
   width: 100px;
   height: 100px;
   transition: all ease .3s;
+
+  @include respondTo(desktop){
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .header{
@@ -17,6 +22,11 @@
   right: 0;
   width: 100%;
   z-index: 100;
+
+  @include respondTo(tablet){
+    position: relative;
+
+  }
 
   &.is-fixed{
     background-color: rgba(0,0,0,.75);
@@ -44,6 +54,10 @@
   color: $white;
   font-size: 1.5rem;
   text-decoration: none;
+
+  @include respondTo(desktop){
+    font-size: 1.25em;
+  }
 
   & span{
     font-size: 1rem;

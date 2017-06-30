@@ -8,6 +8,10 @@
     border-color: #ccc;
     max-width: 400px;
     margin: 0 auto;
+
+    @include respondTo(tablet){
+      max-width: 320px;
+    }
   }
 
   & .label{
@@ -72,6 +76,10 @@
 
   &__dl{
     width: 150px;
+
+    @include respondTo(tablet){
+      width: 120px;
+    }
   }
 
   &__phone,

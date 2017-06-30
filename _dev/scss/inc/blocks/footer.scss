@@ -3,6 +3,14 @@
     color: #fff;
     padding: 2rem 0 1rem;
     font-weight: 300;
+
+    & p{
+        line-height: 1.25;
+
+        @include respondTo(desktop){
+            font-size: .8em;
+        }
+    }
 }
 
 .copyright{
