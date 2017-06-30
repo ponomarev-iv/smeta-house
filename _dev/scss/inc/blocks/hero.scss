@@ -5,6 +5,8 @@
   overflow: hidden;
   position: relative;
   min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 3em;
 
   &__bg{
     background: url('../img/bg_hero.png') no-repeat scroll 50% 50% / cover;
