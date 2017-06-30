@@ -5,18 +5,39 @@
   background: url('../img/logo.png') no-repeat scroll transparent 50% 50% / contain;
   width: 100px;
   height: 100px;
+  transition: all ease .3s;
 }
 
 .header{
   padding: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  transition: all ease .2s;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
 
-  //&__left,
-  //&__right{
-  //  opacity: 0;
-  //}
+  &.is-fixed{
+    background-color: rgba(0,0,0,.75);
+    padding: 1rem 0;
+
+    & .logo{
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  & .c-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left,
+  &__right{
+    opacity: 0;
+  }
 }
 
 .phone{

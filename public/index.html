@@ -10,10 +10,10 @@
 </head>
 <body>
 
-<section id="hero" class="hero">
+<div id="hero" class="hero">
     <div class="hero__bg"></div>
-    <div class="c-wrap">
-        <header class="header">
+    <header id="js-header" class="header">
+        <div class="c-wrap">
             <div class="header__left">
                 <div class="logo"></div>
             </div>
@@ -32,105 +32,450 @@
             <div class="header__right">
                 <a href="tel:+73422025177" class="phone"><span>8&nbsp;(342)&nbsp;</span>202-51-77</a>
             </div>
-        </header>
+        </div>
+    </header>
+
+    <div class="c-wrap">
 
         <h1 class="hero__title">Cоставление и&nbsp;проверка сметной документации</h1>
 
-            <p class="hero__txt">
-                Мы готовы сделать бесплатный предварительный расчет вашего проекта прямо сегодня
-            </p>
+        <p class="hero__txt">
+            Возможность работы в&nbsp;краткие сроки и&nbsp;получения готовой продукции <br>(смет или актов выполненных работ КС-2 и&nbsp;КС-3) в&nbsp;день
+            обращения.
+        </p>
 
-            <div class="hero__form">
-                <form action="" class="form">
-                    <div class="form__row">
-                        <label for="name" class="label">Ваше имя:</label>
-                        <input id="name" name="name" type="text" class="input" placeholder="Иван Иванов" required>
-                    </div>
+        <div class="hero__form">
+            <form action="" class="form">
+                <div class="form__row">
+                    <label for="name" class="label">Ваше имя:</label>
+                    <input id="name" name="name" type="text" class="input" placeholder="Иван Иванов" required>
+                </div>
 
-                    <div class="form__row">
-                        <label for="email" class="label">Ваш e-mail:</label>
-                        <input id="email" name="email" type="email" class="input" placeholder="mail@mail.ru" required>
-                    </div>
+                <div class="form__row">
+                    <label for="email" class="label">Ваш e-mail:</label>
+                    <input id="email" name="email" type="email" class="input" placeholder="mail@mail.ru" required>
+                </div>
 
-                    <div class="form__row">
-                        <label for="mess" class="label">Ваше сообщение:</label>
-                        <textarea id="mess" name="mess" class="textarea" placeholder="Опишите, что необходимо сделать"  rows="3"></textarea>
-                    </div>
-                    <div class="form__row">
-                        <button type="submit" class="form__btn">Отправить</button>
-                    </div>
-                </form>
-            </div>
+                <div class="form__row">
+                    <label for="mess" class="label">Ваше сообщение:</label>
+                    <textarea id="mess" name="mess" class="textarea" placeholder="Опишите, что необходимо сделать" rows="3"></textarea>
+                </div>
+                <div class="form__row">
+                    <button type="submit" class="form__btn">Отправить</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <a href="#" class="scroll-down">
+    <a href="#service" id="js-scroll" class="scroll-down">
         <img src="img/scroll-down.svg" alt="">
     </a>
 
-</section>
+</div>
 
-<section class="service">
+<section id="service" class="service">
     <div class="c-wrap">
         <h2 class="section-title">Вы&nbsp;строите&nbsp;&mdash; мы&nbsp;считаем</h2>
         <div class="service__wrap">
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-1.png" alt="" class="service__icon">
                 <span class="service__name">Земляные работы</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-2.png" alt="" class="service__icon">
                 <span class="service__name">Свайные работы</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-3.png" alt="" class="service__icon">
                 <span class="service__name">Наружная и&nbsp;внутренняя отделка</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-4.png" alt="" class="service__icon">
                 <span class="service__name">Монтаж и&nbsp;изготовление металлоконструкций</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-5.png" alt="" class="service__icon">
                 <span class="service__name">Сантехнические работы</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-6.png" alt="" class="service__icon">
                 <span class="service__name">Электромонтажные работы</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-7.png" alt="" class="service__icon">
                 <span class="service__name">Сети связи</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-8.png" alt="" class="service__icon">
                 <span class="service__name">Отопление и&nbsp;вентиляция</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-9.png" alt="" class="service__icon">
                 <span class="service__name">Кровля</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-10.png" alt="" class="service__icon">
                 <span class="service__name">Наружные сети</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-11.png" alt="" class="service__icon">
                 <span class="service__name">Благоустройство</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-12.png" alt="" class="service__icon">
                 <span class="service__name">Несущие конструкции</span>
             </div>
             <div class="service__item">
-                <img src="img/" alt="" class="service__icon">
+                <img src="img/icon-13.png" alt="" class="service__icon">
                 <span class="service__name">Экспертиза сметной документации</span>
             </div>
         </div>
     </div>
 </section>
 
+<section id="price">
+    <div class="c-wrap">
+        <h3 class="section-title">Расценки на&nbsp;составление смет и&nbsp;сопутствующие работы</h3>
+
+        <table class="price-table">
+            <tr>
+                <th>№</th>
+                <th>Наименование</th>
+                <th>Стоимость</th>
+            </tr>
+            <tr class="bg">
+                <td rowspan="4">1</td>
+                <td colspan="2" class="sub_bot">Составление локальных смет базисно-индексным методом по готовой ведомости объемов работ (ВОР):</td>
+
+            </tr>
+            <tr class="bg">
+                <td class="sub">- позиции сметы с 1 по 10-ю</td>
+                <td class="sub">100 руб. за поз.</td>
+            </tr>
+            <tr class="bg">
+                <td class="sub">- позиции сметы с 11-й по 30-ю</td>
+                <td class="sub">50 руб. за поз.</td>
+            </tr>
+            <tr class="bg">
+                <td class="sub_top">- позиции сметы начиная с 31-й</td>
+                <td class="sub_top">30 руб. за поз.</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">2</td>
+                <td colspan="2" class="sub_bot">
+                    Составление локальных смет ресурсным методом по готовой ведомости объемов работ (ВОР):
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">- позиции сметы с 1 по 10-ю</td>
+                <td class="sub">250 руб. за поз.</td>
+            </tr>
+            <tr>
+                <td class="sub">- позиции сметы с 11-й по 30-ю</td>
+                <td class="sub">150 руб. за поз.</td>
+            </tr>
+            <tr>
+                <td class="sub_top">- позиции сметы начиная с 31-й</td>
+                <td class="sub_top">100 руб. за поз.</td>
+            </tr>
+
+            <tr class="bg">
+                <td>3</td>
+                <td>
+                    Выезд на место в пределах г. Перми
+                </td>
+                <td>
+                    500 руб.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    Выезд на место за пределы г. Перми
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>5</td>
+                <td>
+                    Проведение обмерочных работ
+                </td>
+                <td>
+                    500 руб./час
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>
+                    Подсчет объемов работ и составление ведомости объемов работ (ВОР)
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>7</td>
+                <td>
+                    Составление актов приемки выполненных работ по форме КС-2 и КС-3 (если в КС-2 закрывается часть работ).<br> По желанию Заказчика к акту КС-2
+                    бесплатно прилагается отчет о расходе материалов по нормам ГЭСН.
+                </td>
+                <td>
+                    300 руб.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    Составление объектных сметных расчетов (ОСР) и сводных сметных расчетов (ССР)
+                </td>
+                <td>
+                    200 руб./расчет
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>9</td>
+                <td>
+                    Переделка сметы по замечаниям проверяющего во второй и последующие разы
+                </td>
+                <td>
+                    300 руб.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    Переделка актов КС-2 и КС-3 по замечаниям проверяющего
+                </td>
+                <td>
+                    200 руб.
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>11</td>
+                <td>
+                    Экспертиза сметной документации
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>
+                    Списание материалов
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>13</td>
+                <td>
+                    Сметное сопровождение строительства объекта
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>
+                    Анализ себестоимости строительного продукта
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr class="bg">
+                <td>15</td>
+                <td>
+                    Составление календарных планов
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>
+                    Работа с инвестиционными проектами
+                </td>
+                <td>
+                    договорная
+                </td>
+            </tr>
+        </table>
+        <a href="doc/price-list.xlsx" class="price-list">Скачать подробный прайс-лист</a>
+    </div>
+</section>
+
+<section id="job-time">
+    <div class="c-wrap">
+        <h4 class="section-title">Сроки выполнения работ</h4>
+        <p class="time-block">
+            Сроки выполнения работ обговариваются <b>индивидуально</b>.
+        </p>
+        <p class="time-block">
+            Возможность работы в краткие сроки и получения готовой продукции <br>(смет или актов выполненных работ КС-2 и КС-3) в день обращения.
+        </p>
+    </div>
+</section>
+
+<section id="feedback">
+    <div class="c-wrap">
+        <h5 class="section-title">Отзывы</h5>
+
+        <div id="js-feedback" class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="feedback">
+                        <div class="feedback__img">
+                            <img src="img/feedback-1.jpg" alt="">
+                        </div>
+                        <p class="feedback__txt">
+                            Обратился в&nbsp;данную организацию по&nbsp;поводу ремонта собственной квартиры. Профессионально, достаточно быстро и&nbsp;по&nbsp;разумным
+                            ценам. Спасибо.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="feedback">
+                        <div class="feedback__img">
+                            <img src="img/feedback-2.png" alt="">
+                        </div>
+                        <p class="feedback__txt">
+                            Очень понравилось работать с&nbsp;этой командой. Обращались за&nbsp;полным комплексом работ: выезд на&nbsp;объект, подсчёт объёмов,
+                            составление сметы и&nbsp;защита документации у&nbsp;Заказчика. Все виды работ выполнены грамотно. Результатом мы&nbsp;остались
+                            довольны.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="feedback">
+                        <div class="feedback__img">
+                            <img src="img/feedback-3.jpg" alt="">
+                        </div>
+                        <p class="feedback__txt">
+                            Мы&nbsp;просили обсчитать себестоимость выпускаемой продукции на&nbsp;промышленном производстве. Со&nbsp;сроками выполнения
+                            чуть-чуть задержались, но&nbsp;работу выполнили очень чётко и&nbsp;ясно. Продукт выдали в&nbsp;графической понятной форме (даже для
+                            человека, который в&nbsp;экономике ничего не&nbsp;понимает). Дали некоторые советы по&nbsp;улучшению рентабельности предприятия.
+                            Претензий к&nbsp;выполненной работе у&nbsp;меня нет.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="feedback">
+                        <div class="feedback__img">
+                            <img src="img/feedback-4.jpg" alt="">
+                        </div>
+                        <p class="feedback__txt">
+                            Мы&nbsp;собирались судиться с&nbsp;управляющей компанией, заказывали смету для обсчета ремонта квартиры совместно с&nbsp;подрядчиком.
+                            Ремонт произвели, документы представили в&nbsp;суд, суд успешно прошел, деньги нам на&nbsp;ремонт выплатили. Благодарим за&nbsp;помощь!!!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="c-wrap">
+        <h6 class="section-title">
+            Контактная инфомрация
+        </h6>
+
+        <div class="contact-block">
+            <p class="contact-block__txt">
+                <b>Нужна смета?</b><br>
+                Мы поможем Вам!<br>
+                <span class="sm">Свяжитесь с&nbsp;нами или заполните форму обратной связи, и&nbsp;мы&nbsp;перезвоним Вам в&nbsp;ближайшее время.</span>
+            </p>
+
+            <div class="contact-block__wrap">
+                <div class="contact-block__col">
+                    <div class="contact-block__info-row">
+                        <span class="contact-block__dl">Телефон:</span>
+                        <a href="tel:+73422025177" class="contact-block__dr contact-block__phone">+7&nbsp;(342)&nbsp;202-51-77</a>
+                    </div>
+
+                    <div class="contact-block__info-row">
+                        <span class="contact-block__dl">E-mail:</span>
+                        <a href="mailto:smetahouse@gmail.com" class="contact-block__dr contact-block__email">smetahouse@gmail.com</a>
+                    </div>
+
+                    <div class="contact-block__info-row">
+                        <span class="contact-block__dl">ИНН:</span>
+                        <span class="contact-block__dr">590503608967</span>
+                    </div>
+
+                    <div class="contact-block__info-row">
+                        <span class="contact-block__dl">ОРГНИП:</span>
+                        <span class="contact-block__dr">317595800019810</span>
+                    </div>
+
+                    <p class="contact-block__txt contact-block__txt_left">Мы в соц. сетях:</p>
+                    <p>
+                        <a href="https://www.facebook.com/groups/1424531804273698/" target="_blank" class="social-link"><img src="img/ico-facebook.svg" alt=""></a>
+                        <a href="https://vk.com/smetahouse" target="_blank" class="social-link"><img src="img/ico-vk.svg" alt=""></a>
+                    </p>
+
+
+                </div>
+                <div class="contact-block__col">
+                    <form action="" class="form">
+                        <div class="form__row">
+                            <label for="name" class="label">Ваше имя:</label>
+                            <input id="name" name="name" type="text" class="input" placeholder="Иван Иванов" required>
+                        </div>
+
+                        <div class="form__row">
+                            <label for="email" class="label">Ваш e-mail:</label>
+                            <input id="email" name="email" type="email" class="input" placeholder="mail@mail.ru" required>
+                        </div>
+
+                        <div class="form__row">
+                            <label for="mess" class="label">Ваше сообщение:</label>
+                            <textarea id="mess" name="mess" class="textarea" placeholder="Опишите, что необходимо сделать" rows="3"></textarea>
+                        </div>
+                        <div class="form__row">
+                            <button type="submit" class="form__btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="c-wrap">
+        <div class="age">18+</div>
+        <p>
+            *Настоящая информация о&nbsp;стоимости услуг не&nbsp;является офертой, публичной офертой и&nbsp;предоставляется исключительно в&nbsp;информационно-ознакомительных
+            целях.
+        </p>
+        <p class="copyright">&copy;&nbsp;2017. Все права защищены.</p>
+    </div>
+</footer>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="libs/page-nav.js"></script>
+<script src="libs/swiper.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

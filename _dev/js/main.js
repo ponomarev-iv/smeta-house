@@ -33,7 +33,71 @@ function animateHeader(){
 
 animateHeader();
 
+function initSwiper(){
+    var mySwiper = new Swiper ('#js-feedback', {
+        // Optional parameters
+        loop: true,
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    })
+}
+
+function scrollToBlock(){
+    var nav = $('#js-nav'),
+        link = nav.children('a');
+
+    link.click(function(e){
+        e.preventDefault();
+
+        var idBlock = $(this).attr('href');
+        if ($(idBlock).length != 0){
+            $('html, body').animate({ scrollTop: $(idBlock).offset().top - 90}, 500);
+        }
+        return false;
+    })
+}
+
+function scrollLink(){
+    var link = $('#js-scroll');
+
+    link.click(function(e){
+        e.preventDefault();
+
+        var idBlock = $(this).attr('href');
+        if ($(idBlock).length != 0){
+            $('html, body').animate({ scrollTop: $(idBlock).offset().top - 90 }, 500);
+        }
+        return false;
+    })
+}
+
+function fixHeader(){
+    var header = $('#js-header');
+
+    $(window).scroll(function (){
+        header.addClass('is-fixed');
+    });
+
+    if ($(window).scrollTop() > 10) {
+        header.addClass('is-fixed');
+    }
+}
+
+function navPage(){
+    $('#js-nav').singlePageNav({
+        filter: ':not(.external)',
+        updateHash: true,
+        currentClass: 'is-active'
+    });
+}
 
 $(document).ready(function(){
     toggleMenu();
+    initSwiper();
+    // scrollToBlock();
+    scrollLink();
+    fixHeader();
+    navPage()
 });

@@ -6,7 +6,7 @@
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-bottom: 3em;
+  padding: 9em 0 3em;
 
   &__bg{
     background: url('../img/bg_hero.png') no-repeat scroll 50% 50% / cover;
@@ -23,7 +23,7 @@
     font-size: 3rem;
     color: $white;
     text-align: center;
-    padding: 2em 0 1em;
+    padding: 1em 0;
     //opacity: 0;
 
   }

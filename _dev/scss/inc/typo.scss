@@ -1,0 +1,20 @@
+/**
+ * Created by Pompo on 29.06.2017.
+ */
+.section-title{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 1.5em;
+  position: relative;
+
+  &:after{
+    position: absolute;
+    bottom: 1em;
+    width: 300px;
+    height: 2px;
+    left: calc(50% - 150px);
+    content: '';
+    background-color: $accent;
+  }
+}
