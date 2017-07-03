@@ -7,13 +7,29 @@
   border: none;
   margin-bottom: 3rem;
 
+  @include respondTo(mobile){
+    font-size: .8em;
+  }
+
   & th, td{
     vertical-align: top;
     padding: 1rem .75rem;
     line-height: 1.5;
 
+    @include respondTo(small){
+      padding: .75rem .5rem;
+    }
+
+    &:first-child{
+      text-align: center;
+    }
+
     &:not(:first-child){
       min-width: 150px;
+
+      @include respondTo(small){
+        min-width: 120px;
+      }
     }
   }
 
@@ -23,6 +39,10 @@
     font-size: 1.2em;
     text-align: left;
     padding: .75rem .5rem;
+
+    @include respondTo(mobile){
+      font-size: 1em;
+    }
   }
 
   & .sub{

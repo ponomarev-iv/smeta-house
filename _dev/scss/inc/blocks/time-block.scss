@@ -11,6 +11,10 @@
   line-height: 1.5;
   padding-bottom: 1em;
 
+  @include respondTo(mobile){
+    font-size: 1em;
+  }
+
   & b{
     font-weight: 500;
   }

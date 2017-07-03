@@ -10,8 +10,17 @@
   display: flex;
   box-sizing: content-box;
 
+  @include respondTo(small){
+    flex-direction: column;
+  }
+
   &__img{
     margin-right: 20px;
+
+    @include respondTo(small){
+      margin: 0 0 20px;
+      text-align: center;
+    }
 
     & img{
       border: 1px solid #ccc;

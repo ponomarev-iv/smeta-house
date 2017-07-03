@@ -90,11 +90,17 @@ function fixHeader(){
 }
 
 function navPage(){
-    $('#js-nav').singlePageNav({
-        filter: ':not(.external)',
-        updateHash: true,
-        currentClass: 'is-active'
-    });
+
+    if($('#js-nav').length){
+        $('#js-nav').singlePageNav({
+            filter: ':not(.external)',
+            updateHash: true,
+            currentClass: 'is-active'
+        });
+    }
+    else
+        return false;
+
 }
 $(window).resize(function(){
     fixHeader();

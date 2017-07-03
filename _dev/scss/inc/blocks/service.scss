@@ -28,6 +28,16 @@
     @include respondTo(tablet){
       font-size: 1em;
     }
+
+    @include respondTo(mobile){
+      width: 49%;
+      font-size: .9em;
+    }
+
+    @include respondTo(small){
+      width: 100%;
+      font-size: 1em;
+    }
   }
 
   &__icon{

@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6{
 
 section{
   padding: 4rem 0;
+
+  @include respondTo(small){
+    padding: 3rem 0;
+  }
 }
 
 .c-wrap{

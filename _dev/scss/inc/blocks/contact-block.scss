@@ -44,16 +44,36 @@
     & b{
       font-weight: 500;
     }
+
+    & .sm{
+      @include respondTo(small){
+        font-size: .85rem;
+        line-height: 1.2;
+      }
+    }
   }
 
   &__wrap{
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
+
+    @include respondTo(mobile){
+      flex-direction: column-reverse;
+    }
   }
 
   &__col{
     width: 49%;
+
+    @include respondTo(mobile){
+      width: 100%;
+      margin-bottom: 2em;
+
+      &:first-of-type{
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__info-row{
@@ -72,6 +92,10 @@
     display: inline-block;
     font-size: 1.1em;
     line-height: 1.5;
+
+    @include respondTo(small){
+      font-size: .85em;
+    }
   }
 
   &__dl{
@@ -80,6 +104,10 @@
     @include respondTo(tablet){
       width: 120px;
     }
+
+    @include respondTo(small){
+      width: 100px;
+    }
   }
 
   &__phone,
@@ -87,7 +115,10 @@
     color: $accent;
     font-size: 1.2em;
     text-decoration: none;
-    //font-weight: 500;
+
+    @include respondTo(small){
+      font-size: 1em;
+    }
   }
 }
 
