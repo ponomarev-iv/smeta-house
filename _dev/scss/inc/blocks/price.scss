@@ -12,16 +12,12 @@
   }
 
   & th, td{
-    vertical-align: top;
+    vertical-align: middle;
     padding: 1rem .75rem;
     line-height: 1.5;
 
     @include respondTo(small){
       padding: .75rem .5rem;
-    }
-
-    &:first-child{
-      text-align: center;
     }
 
     &:not(:first-child){
@@ -70,6 +66,8 @@
 
 .price-list{
   padding-left: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
   color: $accent;
   text-decoration: none;
   transition: opacity ease .3s;

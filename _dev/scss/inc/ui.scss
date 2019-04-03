@@ -71,3 +71,42 @@
   height: auto;
   resize: none;
 }
+
+//upload files
+.upload{
+  border: 1px dashed #fff;
+  text-align: center;
+  letter-spacing: 1.9px;
+  padding: 20px 40px;
+  line-height: 1.5;
+
+  &.focus{
+    border: 1px solid #ff8562;
+  }
+
+  &__txt{
+    color: #fff;
+    font-size: 12px;
+  }
+
+  &__lbl{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  &__inp{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.file-name{
+  padding-bottom: .5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: 11px;
+}

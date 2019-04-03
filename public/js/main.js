@@ -1,1 +1,144 @@
-function toggleMenu(){var t=$("#js-nav"),e=t.children();e.click(function(){return!$(this).hasClass("is-active")&&(e.removeClass("is-active"),void $(this).addClass("is-active"))})}function animateHeader(){var t=new TimelineMax;t.fromTo(".header__left",1,{y:-100,opacity:0},{y:0,opacity:1}).fromTo(".header__right",1,{x:200,opacity:0},{x:0,opacity:1},"-=0.7").staggerFromTo(".main-nav a",.5,{opacity:0,y:-30},{opacity:1,y:-0},.1).fromTo(".hero__title",1,{y:20,opacity:0},{y:0,opacity:1},"-=0.7").fromTo(".hero__txt",.5,{y:30,opacity:0},{y:0,opacity:1}).fromTo(".hero__form",1,{opacity:0},{opacity:1},"-=0.7").fromTo(".scroll-down",.5,{y:10,opacity:0},{y:0,opacity:1},"-=0.5")}function initSwiper(){new Swiper("#js-feedback",{loop:!0,nextButton:".swiper-button-next",prevButton:".swiper-button-prev"})}function scrollToBlock(){var t=$("#js-nav"),e=t.children("a");e.click(function(t){t.preventDefault();var e=$(this).attr("href");return 0!=$(e).length&&$("html, body").animate({scrollTop:$(e).offset().top-90},500),!1})}function scrollLink(){var t=$("#js-scroll");t.click(function(t){t.preventDefault();var e=$(this).attr("href");return 0!=$(e).length&&$("html, body").animate({scrollTop:$(e).offset().top-90},500),!1})}function fixHeader(){if($(window).width()>979){var t=$("#js-header");$(window).scroll(function(){t.addClass("is-fixed")}),$(window).scrollTop()>10&&t.addClass("is-fixed")}}function navPage(){return!!$("#js-nav").length&&void $("#js-nav").singlePageNav({filter:":not(.external)",updateHash:!0,currentClass:"is-active"})}animateHeader(),$(window).resize(function(){fixHeader()}),$(document).ready(function(){toggleMenu(),initSwiper(),scrollLink(),fixHeader(),navPage()});
+/**
+ * Created by ponomarev-iv on 27.06.2017.
+ */
+
+function toggleMenu() {
+  var menu = $('#js-nav'),
+    link = menu.children();
+
+  link.click(function () {
+    if ($(this).hasClass('is-active')) {
+      return false
+    } else {
+      link.removeClass('is-active');
+      $(this).addClass('is-active');
+    }
+  })
+}
+
+
+function animateHeader() {
+  var tl = new TimelineMax();
+
+  tl
+    .fromTo('.header__left', 1, {y: -100, opacity: 0}, {y: 0, opacity: 1})
+    .fromTo('.header__right', 1, {x: 200, opacity: 0}, {x: 0, opacity: 1}, "-=0.7")
+    .staggerFromTo('.main-nav a', 0.5, {opacity: 0, y: -30}, {opacity: 1, y: -0}, 0.1)
+    .fromTo('.hero__title', 1, {y: 20, opacity: 0}, {y: 0, opacity: 1}, "-=0.7")
+    .fromTo('.hero__txt', 0.5, {y: 30, opacity: 0}, {y: 0, opacity: 1})
+    .fromTo('.hero__form', 1, {opacity: 0}, {opacity: 1}, "-=0.7")
+    .fromTo('.scroll-down', 0.5, {y: 10, opacity: 0}, {y: 0, opacity: 1}, "-=0.5");
+}
+
+// animateHeader();
+
+function initSwiper() {
+  var mySwiper = new Swiper('#js-feedback', {
+    // Optional parameters
+    loop: true,
+
+    // Navigation arrows
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
+  })
+}
+
+function scrollToBlock() {
+  var nav = $('#js-nav'),
+    link = nav.children('a');
+
+  link.click(function (e) {
+    e.preventDefault();
+
+    var idBlock = $(this).attr('href');
+    if ($(idBlock).length != 0) {
+      $('html, body').animate({scrollTop: $(idBlock).offset().top - 90}, 500);
+    }
+    return false;
+  })
+}
+
+function scrollLink() {
+  var link = $('#js-scroll');
+
+  link.click(function (e) {
+    e.preventDefault();
+
+    var idBlock = $(this).attr('href');
+    if ($(idBlock).length != 0) {
+      $('html, body').animate({scrollTop: $(idBlock).offset().top - 90}, 500);
+    }
+    return false;
+  })
+}
+
+function fixHeader() {
+
+  if ($(window).width() > 979) {
+    var header = $('#js-header');
+
+    $(window).scroll(function () {
+      header.addClass('is-fixed');
+    });
+
+    if ($(window).scrollTop() > 10) {
+      header.addClass('is-fixed');
+    }
+  }
+
+}
+
+function navPage() {
+
+  if ($('#js-nav').length) {
+    $('#js-nav').singlePageNav({
+      filter: ':not(.external)',
+      updateHash: true,
+      currentClass: 'is-active'
+    });
+  } else
+    return false;
+
+}
+
+function uploadFile() {
+  $('input[type=file]').change(function () {
+    let files = this.files;
+    for (let i = 0; i < files.length; i++) {
+      $(this).closest('.upload').prepend("<p class='file-name'>" + files[i].name + "</p>");
+    }
+  })
+}
+
+function sendForm() {
+  $(".form").submit(function (e) {
+    e.preventDefault();
+
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(this).serialize()
+      }).done(function () {
+        $(this).find("input").val("");
+          alert("Спасибо за обращение в нашу компанию. В ближайшее время мы свяжемся с вами.");
+          $(".form").trigger("reset")
+      })
+  })
+}
+
+
+
+$(window).resize(function () {
+  fixHeader();
+});
+
+$(document).ready(function () {
+  toggleMenu();
+  initSwiper();
+  // scrollToBlock();
+  scrollLink();
+  fixHeader();
+  navPage();
+  uploadFile();
+  sendForm();
+});

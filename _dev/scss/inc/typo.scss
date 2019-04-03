@@ -31,3 +31,27 @@
     }
   }
 }
+
+.content-title{
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: .75em 0;
+
+  @include respondTo(desktop){
+    font-size: 1.15rem;
+  }
+}
+
+.notes{
+  list-style-type: decimal;
+  padding-left: 20px;
+
+  & li{
+    padding-bottom: .75em;
+    line-height: 1.3;
+
+    &:last-of-type{
+      padding-bottom: 0;
+    }
+  }
+}
