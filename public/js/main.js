@@ -106,19 +106,27 @@ function uploadFile() {
     let files = this.files;
     for (let i = 0; i < files.length; i++) {
       $(this).closest('.upload').prepend("<p class='file-name'>" + files[i].name + "</p>");
+      $('#file').val()
+
     }
   })
 }
 
 function sendForm() {
-  $(".form").submit(function (e) {
+  $("#sendform").submit(function (e) {
     e.preventDefault();
+    let $that = $(this),
+    formData = new FormData($that.get(0));
+    console.log(formData);
 
-      $.ajax({
+    $.ajax({
         type: "POST",
-        url: "send.php",
-        data: $(this).serialize()
-      }).done(function () {
+        url: "send-test.php",
+        contentType: false,
+        processData: false,
+        data: formData
+  }).done(function (returndata) {
+        console.log(returndata);
         $(this).find("input").val("");
           alert("Спасибо за обращение в нашу компанию. В ближайшее время мы свяжемся с вами.");
           $(".form").trigger("reset")
