@@ -80,6 +80,10 @@
   padding: 20px 40px;
   line-height: 1.5;
 
+  &_sec{
+    border: 1px dashed #ccc;
+  }
+
   &.focus{
     border: 1px solid #ff8562;
   }
@@ -87,6 +91,10 @@
   &__txt{
     color: #fff;
     font-size: 12px;
+
+    @at-root .upload_sec &{
+      color: #333;
+    }
   }
 
   &__lbl{
@@ -94,11 +102,16 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 13px;
+
+    &.is-hide{
+      display: none;
+      visibility: hidden;
+    }
   }
 
   &__inp{
-    //display: none;
-    //visibility: hidden;
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -109,4 +122,8 @@
   text-overflow: ellipsis;
   width: 100%;
   font-size: 11px;
+
+  @at-root .upload_sec &{
+    color: #333;
+  }
 }

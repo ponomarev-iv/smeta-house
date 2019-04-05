@@ -16,11 +16,20 @@ $name = trim($_POST["name"]);
 $email = trim($_POST["email"]);
 $comment = trim($_POST["mess"]);
 $file = $_FILES['files']['tmp_name'];
-$filename = $_FILES['files']['name'];
 $filetype = $_FILES['files']['type'];
 $filesize = $_FILES['files']['size'];
 
-$mail->addAttachment($file, $filename, 'base64', $filetype);
+if (array_key_exists('files', $_FILES)){
+	for ($ct = 0; $ct < count($_FILES['files']['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), sha1($_FILES['files']['name'][$ct]));
+        $filename = $_FILES['files']['name'][$ct];
+        if (move_uploaded_file($_FILES['files']['tmp_name'][$ct], $uploadfile)) {
+            $mail->addAttachment($uploadfile, $filename);
+        } else {
+            $msg .= 'Failed to move file to ' . $uploadfile;
+        }
+    }
+}
 
 $mail->Body     = "
 Имя: {$name}, 

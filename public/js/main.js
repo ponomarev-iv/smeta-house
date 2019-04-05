@@ -30,7 +30,7 @@ function animateHeader() {
     .fromTo('.scroll-down', 0.5, {y: 10, opacity: 0}, {y: 0, opacity: 1}, "-=0.5");
 }
 
-// animateHeader();
+animateHeader();
 
 function initSwiper() {
   var mySwiper = new Swiper('#js-feedback', {
@@ -106,30 +106,29 @@ function uploadFile() {
     let files = this.files;
     for (let i = 0; i < files.length; i++) {
       $(this).closest('.upload').prepend("<p class='file-name'>" + files[i].name + "</p>");
-      $('#file').val()
-
     }
+    $('.upload__lbl').addClass('is-hide')
   })
 }
 
 function sendForm() {
-  $("#sendform").submit(function (e) {
+  $('.form').submit(function (e) {
     e.preventDefault();
     let $that = $(this),
     formData = new FormData($that.get(0));
-    console.log(formData);
 
     $.ajax({
         type: "POST",
-        url: "send-test.php",
+        url: "send.php",
         contentType: false,
         processData: false,
         data: formData
-  }).done(function (returndata) {
-        console.log(returndata);
+  }).done(function () {
         $(this).find("input").val("");
           alert("Спасибо за обращение в нашу компанию. В ближайшее время мы свяжемся с вами.");
-          $(".form").trigger("reset")
+          $(".form").trigger("reset");
+          $('.upload__lbl').removeClass('is-hide');
+          $('.file-name').remove();
       })
   })
 }
