@@ -1,0 +1,42 @@
+//form
+.form{
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 12px;
+    color: $white;
+    padding: 20px;
+
+    &__row{
+        margin-bottom: 1rem;
+
+        &:last-of-type{
+            margin: 0 auto;
+        }
+    }
+
+    &__btn{
+        background-color: rgba(255,255,255,.8);
+        transition: all linear .3s;
+        cursor: pointer;
+        border-radius: 6px;
+        width: 220px;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        text-transform: uppercase;
+        border: none;
+        position: relative;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 1.25em;
+        display: block;
+
+        &:hover{
+            background-color: #ffffff;
+        }
+
+        &:active{
+            top: 1px;
+        }
+    }
+}

@@ -124,12 +124,37 @@ function sendForm() {
         processData: false,
         data: formData
   }).done(function () {
+        sendUserAnswer(formData);
         $(this).find("input").val("");
-          alert("Спасибо за обращение в нашу компанию. В ближайшее время мы свяжемся с вами.");
+          alert("Спасибо за обращение в нашу компанию. Наши специалисты свяжутся с Вами в течение 30 минут");
           $(".form").trigger("reset");
           $('.upload__lbl').removeClass('is-hide');
           $('.file-name').remove();
       })
+  })
+}
+
+function sendUserAnswer(formData){
+  $.ajax({
+    type: "POST",
+    url: "send-user.php",
+    contentType: false,
+    processData: false,
+    data: formData
+  }).done(function(){
+    console.log('send user');
+  })
+}
+
+function scrollToForm(){
+  var link = $('.js-link-form'),
+      form = $('#form-footer');
+  link.on('click', function(){
+    var txt = $(this).attr('data-txt');
+    $('html, body').animate({scrollTop: form.offset().top - 110}, 500);
+    form.find('#name1').focus();
+    form.find('#mess1').text('Добрый день, нужна смета на ' + txt);
+
   })
 }
 
@@ -140,6 +165,7 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
+  scrollToForm();
   toggleMenu();
   initSwiper();
   // scrollToBlock();
@@ -148,4 +174,5 @@ $(document).ready(function () {
   navPage();
   uploadFile();
   sendForm();
+  $('.inp-phone').mask('+7 (000) 000-00-00', {placeholder: "+7 (xxx) xxx-xx-xx"})
 });

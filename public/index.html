@@ -48,13 +48,18 @@
         <div class="hero__form">
             <form action="" class="form" method="post" enctype="multipart/form-data">
                 <div class="form__row">
-                    <label for="name" class="label">Ваше имя:</label>
+                    <label for="name" class="label">Ваше имя: *</label>
                     <input id="name" name="name" type="text" class="input" placeholder="Иван Иванов" required>
                 </div>
 
                 <div class="form__row">
-                    <label for="email" class="label">Ваш e-mail:</label>
+                    <label for="email" class="label">Ваш e-mail: *</label>
                     <input id="email" name="email" type="email" class="input" placeholder="mail@mail.ru" required>
+                </div>
+
+                <div class="form__row">
+                    <label for="phone" class="label">Телефон:</label>
+                    <input id="phone" name="phone" type="tel" class="input inp-phone" placeholder="" >
                 </div>
 
                 <div class="form__row">
@@ -87,51 +92,51 @@
     <div class="c-wrap">
         <h2 class="section-title">Вы&nbsp;строите&nbsp;&mdash; мы&nbsp;считаем</h2>
         <div class="service__wrap">
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="земляные работы">
                 <img src="img/icon-1.png" alt="" class="service__icon">
                 <span class="service__name">Земляные работы</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="cвайные работы">
                 <img src="img/icon-2.png" alt="" class="service__icon">
                 <span class="service__name">Свайные работы</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="наружную и внутреннюю отделку">
                 <img src="img/icon-3.png" alt="" class="service__icon">
                 <span class="service__name">Наружная и&nbsp;внутренняя отделка</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="монтаж и изготовление металлоконструкций">
                 <img src="img/icon-4.png" alt="" class="service__icon">
                 <span class="service__name">Монтаж и&nbsp;изготовление металлоконструкций</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="сантехнические работы">
                 <img src="img/icon-5.png" alt="" class="service__icon">
                 <span class="service__name">Сантехнические работы</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="электромонтажные работы">
                 <img src="img/icon-6.png" alt="" class="service__icon">
                 <span class="service__name">Электромонтажные работы</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="сети связи">
                 <img src="img/icon-7.png" alt="" class="service__icon">
                 <span class="service__name">Сети связи</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="отопление и&nbsp;вентиляцию">
                 <img src="img/icon-8.png" alt="" class="service__icon">
                 <span class="service__name">Отопление и&nbsp;вентиляция</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="кровлю">
                 <img src="img/icon-9.png" alt="" class="service__icon">
                 <span class="service__name">Кровля</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="наружные сети">
                 <img src="img/icon-10.png" alt="" class="service__icon">
                 <span class="service__name">Наружные сети</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="благоустройство">
                 <img src="img/icon-11.png" alt="" class="service__icon">
                 <span class="service__name">Благоустройство</span>
             </div>
-            <div class="service__item">
+            <div class="service__item js-link-form" data-txt="экспертизу сметной документации">
                 <img src="img/icon-13.png" alt="" class="service__icon">
                 <span class="service__name">Экспертиза сметной документации</span>
             </div>
@@ -450,15 +455,20 @@
 
                 </div>
                 <div class="contact-block__col">
-                    <form action="" class="form">
+                    <form action="" class="form" id="form-footer">
                         <div class="form__row">
-                            <label for="name1" class="label">Ваше имя:</label>
+                            <label for="name1" class="label">Ваше имя: *</label>
                             <input id="name1" name="name" type="text" class="input" placeholder="Иван Иванов" required>
                         </div>
 
                         <div class="form__row">
-                            <label for="email1" class="label">Ваш e-mail:</label>
+                            <label for="email1" class="label">Ваш e-mail: </label>
                             <input id="email1" name="email" type="email" class="input" placeholder="mail@mail.ru" required>
+                        </div>
+
+                        <div class="form__row">
+                            <label for="phone1" class="label">Телефон:</label>
+                            <input id="phone1" name="phone" type="tel" class="input inp-phone" placeholder="">
                         </div>
 
                         <div class="form__row">
@@ -497,6 +507,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script src="libs/page-nav.js"></script>
+<script src="libs/jquery.mask.min.js"></script>
 <script src="libs/swiper.min.js"></script>
 <script src="js/main.js"></script>
 <!-- Yandex.Metrika counter -->

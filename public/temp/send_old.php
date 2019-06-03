@@ -9,12 +9,11 @@ $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $mail->setFrom('order@ks2ks3.ru');
 $mail->addAddress('info@ks2ks3.ru');
-$mail->Subject  = 'Сообщение с сайта ks2ks3.ru';
+$mail->Subject  = 'Сообщение с сайта http://ks2ks3.ru';
 
 
 $name = trim($_POST["name"]);
 $email = trim($_POST["email"]);
-$phone = trim($_POST["phone"]);
 $comment = trim($_POST["mess"]);
 $file = $_FILES['files']['tmp_name'];
 $filetype = $_FILES['files']['type'];
@@ -35,7 +34,6 @@ if (array_key_exists('files', $_FILES)){
 $mail->Body     = "
 Имя: {$name}, 
 Email: {$email}, 
-Телефон: {$phone}, 
 Сообщение: {$comment}
 ";
 if(!$mail->send()) {
