@@ -96,6 +96,7 @@ function js() {
       .pipe(browsersync.stream());
 }
 
+
 function html() {
     return gulp
       .src(path.src.html)
@@ -114,6 +115,7 @@ gulp.task("images", images);
 gulp.task("css", styles);
 gulp.task("js", js);
 gulp.task("html", html);
+
 gulp.task('build', gulp.parallel(styles, images, js, html));
 
 // watch

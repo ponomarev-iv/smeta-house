@@ -1,0 +1,3 @@
+RewriteCond %{HTTP_HOST} !^www\.ks2ks3\.ru$ [NC]
+RewriteRule ^(.*)$ http://ks2ks3.ru/$1 [R=301,L]
+

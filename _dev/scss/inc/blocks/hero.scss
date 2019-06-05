@@ -6,7 +6,7 @@
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 9em 0 6em;
+  padding: 6em 0;
 
   @include respondTo(tablet){
     padding-top: 0;
@@ -27,7 +27,7 @@
     font-size: 3rem;
     color: $white;
     text-align: center;
-    padding: 1em 0;
+    padding: .85em 0 .5em;
 
     @include respondTo(desktop){
       font-size: 2rem;
@@ -44,7 +44,7 @@
     color: $white;
     font-size: 1.35rem;
     line-height: 1.5;
-    padding-bottom: 2em;
+    padding-bottom: 1.5em;
 
     @include respondTo(desktop){
       font-size: 1.25rem;
