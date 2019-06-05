@@ -8,8 +8,7 @@ const gulp = require('gulp'),
   newer = require('gulp-newer'),
   size = require('gulp-size'),
   sourcemaps = require('gulp-sourcemaps'),
-  browsersync = require("browser-sync").create(),
-  pug = require('gulp-pug');
+  browsersync = require("browser-sync").create();
 
 const path = {
     build: {
@@ -24,16 +23,13 @@ const path = {
         scss: '_dev/scss/',
         img: '_dev/img/**/*.*',
         js: '_dev/js/*.js',
-        html: '_dev/*.html',
-        pug: '_dev/tmpl/*.pug',
-        project: '_dev/project/**/*.pug'
+        html: '_dev/*.html'
     },
     watch: {
         style: '_dev/scss/**/*.scss',
         img: '_dev/img/**/*.*',
         js: '_dev/js/*',
-        html: '_dev/*.html',
-        pug: '_dev/tmpl/**/*.pug'
+        html: '_dev/*.html'
     },
     clean: 'public/'
 };
@@ -100,29 +96,9 @@ function js() {
       .pipe(browsersync.stream());
 }
 
-// pug error
-function swallowError(error) {
-    console.log(error.toString());
-    this.emit('end')
-}
-
 function html() {
     return gulp
-      .src(path.src.pug)
-      .pipe(pug({
-          pretty: true
-      }))
-      .on('error', swallowError)
-      .pipe(gulp.dest(path.build.html));
-}
-
-function projectHtml(){
-    return gulp
-      .src(path.src.project)
-      .pipe(pug({
-          pretty: true
-      }))
-      .on('error', swallowError)
+      .src(path.src.html)
       .pipe(gulp.dest(path.build.html));
 }
 
@@ -130,8 +106,7 @@ function watchFiles(){
     gulp.watch([path.watch.img], images);
     gulp.watch([path.watch.style], styles);
     gulp.watch([path.watch.js], js);
-    gulp.watch([path.src.pug], gulp.series(html, browserSyncReload));
-    gulp.watch([path.src.project], gulp.series(projectHtml, browserSyncReload));
+    gulp.watch([path.src.html], gulp.series(html, browserSyncReload));
 }
 
 // Tasks
@@ -139,8 +114,6 @@ gulp.task("images", images);
 gulp.task("css", styles);
 gulp.task("js", js);
 gulp.task("html", html);
-gulp.task("project", projectHtml);
-
 gulp.task('build', gulp.parallel(styles, images, js, html));
 
 // watch
