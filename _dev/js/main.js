@@ -127,6 +127,7 @@ function sendForm() {
         sendUserAnswer(formData);
         $(this).find("input").val("");
           alert("Спасибо за обращение в нашу компанию. Наши специалисты свяжутся с Вами в течение 30 минут");
+          ym(53829652, 'reachGoal', 'sendForm');
           $(".form").trigger("reset");
           $('.upload__lbl').removeClass('is-hide');
           $('.file-name').remove();
@@ -141,8 +142,6 @@ function sendUserAnswer(formData){
     contentType: false,
     processData: false,
     data: formData
-  }).done(function(){
-    console.log('send user');
   })
 }
 
