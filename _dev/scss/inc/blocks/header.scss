@@ -48,6 +48,14 @@
   &__right{
     opacity: 0;
   }
+
+  &__notes{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px 0 0;
+    color: $white;
+    text-align: right;
+  }
 }
 
 .phone{
