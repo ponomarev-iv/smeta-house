@@ -14,6 +14,7 @@ $mail->Subject  = 'Сообщение с сайта http://ks2ks3.ru';
 
 $name = trim($_POST["name"]);
 $email = trim($_POST["email"]);
+$phone = trim($_POST["phone"]);
 $comment = trim($_POST["mess"]);
 $file = $_FILES['files']['tmp_name'];
 $filetype = $_FILES['files']['type'];
@@ -33,7 +34,8 @@ if (array_key_exists('files', $_FILES)){
 
 $mail->Body     = "
 Имя: {$name}, 
-Email: {$email}, 
+Email: {$email},
+Телефон: {$phone}, 
 Сообщение: {$comment}
 ";
 if(!$mail->send()) {
