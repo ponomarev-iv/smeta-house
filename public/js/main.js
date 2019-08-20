@@ -43,6 +43,15 @@ function initSwiper() {
   })
 }
 
+function scrollToId () {
+  var url = window.location.href;
+  var id = url.substr(url.lastIndexOf('#') + 1);
+  if (id.length) {
+    $('html, body').animate({scrollTop: $('#' + id).offset().top - 92}, 300);
+  }
+
+}
+
 function scrollToBlock() {
   var nav = $('#js-nav'),
     link = nav.children('a');
@@ -85,7 +94,6 @@ function fixHeader() {
       header.addClass('is-fixed');
     }
   }
-
 }
 
 function navPage() {
@@ -98,7 +106,6 @@ function navPage() {
     });
   } else
     return false;
-
 }
 
 function uploadFile() {
@@ -165,6 +172,7 @@ $(window).resize(function () {
 
 $(document).ready(function () {
   scrollToForm();
+  scrollToId();
   toggleMenu();
   initSwiper();
   // scrollToBlock();

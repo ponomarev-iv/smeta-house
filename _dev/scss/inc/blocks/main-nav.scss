@@ -22,6 +22,7 @@
 
     @include respondTo(desktop){
       font-size: .85em;
+      margin: 0 .5em;
     }
 
     &:before,

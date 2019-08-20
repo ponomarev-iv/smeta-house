@@ -20,6 +20,10 @@
     position: absolute;
     top:0;
     left: 0;
+
+    &_ref {
+      background: url('../img/hero-bg_reference.jpg') no-repeat scroll 50% 50% / cover;
+    }
   }
 
   &__title{
@@ -58,6 +62,23 @@
   &__form{
     max-width: 340px;
     margin: 0 auto;
+  }
+
+  &_ref {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding-bottom: 3rem;
+
+    & .hero__title {
+      font-size: 4rem;
+    }
+
+    & .hero__txt {
+      font-size: 1.75rem;
+      padding-bottom: 0;
+    }
   }
 
   & .c-wrap{
