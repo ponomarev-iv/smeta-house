@@ -41,3 +41,34 @@ section{
     max-width: 768px;
   }
 }
+
+.row{
+  display: flex;
+
+  @include respondTo(tablet){
+    flex-wrap: wrap;
+  }
+}
+
+.c-col{
+  flex: 0 0 70%;
+  max-width: 70%;
+
+  @include respondTo(tablet){
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.img-col{
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding-left: 5rem;
+
+  @include respondTo(tablet){
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 3rem;
+  }
+}

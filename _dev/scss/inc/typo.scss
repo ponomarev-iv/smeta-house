@@ -40,6 +40,11 @@
   @include respondTo(desktop){
     font-size: 1.15rem;
   }
+
+  &_mid{
+    font-size: 1.5rem;
+    padding: 1.2em 0 .75em;
+  }
 }
 
 .notes{
@@ -53,5 +58,24 @@
     &:last-of-type{
       padding-bottom: 0;
     }
+  }
+}
+
+.par{
+  line-height: 1.5;
+  margin-bottom: 1.2em;
+  font-size: 1.2rem;
+
+  @include respondTo(tablet){
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  & b {
+    font-weight: 500;
   }
 }

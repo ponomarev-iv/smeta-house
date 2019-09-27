@@ -71,13 +71,25 @@
     min-height: 50vh;
     padding-bottom: 3rem;
 
+      @include respondTo(tablet){
+          flex-direction: column;
+      }
+
     & .hero__title {
       font-size: 4rem;
+
+        @include respondTo(tablet){
+            font-size: 2.5rem;
+        }
     }
 
     & .hero__txt {
       font-size: 1.75rem;
       padding-bottom: 0;
+
+        @include respondTo(tablet){
+            font-size: 1.2rem;
+        }
     }
   }
 
