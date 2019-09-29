@@ -108,3 +108,21 @@
         }
     }
 }
+
+.center{
+    text-align: center;
+    margin: 3rem 0 1rem;
+}
+
+.link{
+    color: $accent;
+    font-size: 1.25rem;
+    display: inline-block;
+    line-height: 1.5;
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
