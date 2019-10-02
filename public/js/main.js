@@ -45,9 +45,9 @@ function initSwiper() {
 
 function scrollToId () {
   var url = window.location.href;
-  var id = url.substr(url.lastIndexOf('#') + 1);
+  var id = url.substr(url.lastIndexOf('/') + 1);
   if (id.length) {
-    $('html, body').animate({scrollTop: $('#' + id).offset().top - 92}, 300);
+    $('html, body').animate({scrollTop: $(id).offset().top - 92}, 300);
   }
 
 }
